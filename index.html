@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WelCome</title>
+        <!-- vueJs CDN link -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
+    <div id="vue-app">
+      
+      <h1 class="available" v-on:click="change">{{ msg }}</h1>
+
+    </div>
+
     <canvas height='1' id='confetti' width='1'></canvas>
+
+    
+
+    <script>
+      new Vue({
+        el: '#vue-app',
+        data : {
+          msg: 'Hello'
+        },
+        methods:{
+          change(){
+            this.msg = 'Happy Birthday ...'
+          }
+        }
+      })
+   
+    </script>
+
     <script src="script.js"></script>
+
+
+   
 </body>
 </html>

@@ -1,7 +1,10 @@
 html, body {
   margin: 0;
-  padding: 0;
-  background: #000;
+  /* padding: 0;
+  background-image: linear-gradient(to right, red , yellow), url('profile.jpeg'); */
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('profile.jpeg');
+  background-position: center;
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
@@ -13,29 +16,11 @@ html, body {
   width: 100%;
 }
 
-button{
-  text-align: center;
-  padding: 2% auto;
+.available{
+  color:aliceblue; 
+   position: absolute;
+   top: 40%;
+   left: 40%;
+   z-index: 1000;
 }
 
-
-a.iprodev {
-  line-height: normal;
-  font-family: Varela Round, sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 13px;
-  color: #A7AAAE;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  border: 1px solid #A7AAAE;
-  padding: 12px 20px 10px;
-  border-radius: 50px;
-  transition: all .1s ease-in-out;
-  text-transform: uppercase;
-}
-a.iprodev:hover {
-  background: #A7AAAE;
-  color: white;
-}
