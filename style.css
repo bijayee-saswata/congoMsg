@@ -22,5 +22,45 @@ html, body {
    top: 40%;
    left: 40%;
    z-index: 1000;
+   -webkit-animation: mymove 2s infinite ; /* Chrome, Safari, Opera */
+   animation: mymove 1s infinite;
+   animation-direction: alternate;
+
+ }
+
+ #music{
+  position: absolute;
+  top:60%;
+  left: 40%;
+  z-index: 1000;
+ }
+ 
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes mymove {
+   0% {color: white;}
+   30% {color: green;}
+   60% {color: blue;}
+   90% {color: red;}
+   100% {color: white}
+ }
+ 
+ /* Standard syntax */
+ @keyframes mymove {
+  0% {color: white;}
+   30% {color: green;}
+   60% {color: blue;}
+   90% {color: red;}
+   100% {color: white}
+ }
+
+
+ /* Media Query */
+ @media only screen and (max-width: 600px) {
+  #music{
+    position: absolute;
+    top:80%;
+  left: 10%;
+    z-index: 1000;
+   }
 }
 

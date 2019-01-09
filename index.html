@@ -8,6 +8,7 @@
         <!-- vueJs CDN link -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,7 +16,17 @@
 
     <div id="vue-app">
       
-      <h1 class="available" v-on:click="change">{{ msg }}</h1>
+      <h1 class="available" v-on:click="change">{{ msg }} <i v-on:click="music = !music" class="fa fa-music" style="font-size:1em;color:red"></i></h1>
+      
+      <div v-show="music" id="music">
+        <center>
+        <audio controls >
+          <source src="videoplayback.mp3" type="audio/mp3">
+         
+        Your browser does not support the audio element.
+        </audio>
+      </center>
+      </div>
 
     </div>
 
@@ -27,11 +38,13 @@
       new Vue({
         el: '#vue-app',
         data : {
-          msg: 'Hello'
+          msg: 'Hello',
+          music: false
         },
         methods:{
           change(){
-            this.msg = 'Happy Birthday ...'
+            this.msg = 'Happy Birthday Name';
+        
           }
         }
       })
